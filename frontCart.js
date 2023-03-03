@@ -1,5 +1,8 @@
 // 1-1 建立元件：引入 Vue 函式庫
-import { createApp } from "https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.45/vue.esm-browser.min.js";
+// import { createApp } from "https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.45/vue.esm-browser.min.js";
+
+
+const {createApp}=Vue;
 
 const apiUrl = 'https://vue3-course-api.hexschool.io';
 const apiPath = 'kris-api';
@@ -84,6 +87,13 @@ const app = createApp({
             productId: '', // 被點擊「查看更多」的產品的 id
             cart: {},
             loadingItem: '', // 存 id，控制是否 disabled 選單
+            user: {
+                name: '',
+                email: '',
+                tel: '',
+                address: '',
+                message: ''
+              },
         }
     },
     methods: {
