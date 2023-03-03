@@ -64,7 +64,9 @@ https://cdn.jsdelivr.net/npm/vue-loading-overlay@6.0.2/dist/css/index.min.css
                     查看更多
                   </button>
                   <button type="button" class="btn btn-outline-danger" @click="addToCart(product.id)">
-                    <i class="fas fa-spinner fa-pulse"></i>
+                    <i class="fas fa-spinner fa-pulse"
+                    v-if=""
+                    ></i>
                     
                     加到購物車
                   </button>
@@ -95,7 +97,7 @@ https://cdn.jsdelivr.net/npm/vue-loading-overlay@6.0.2/dist/css/index.min.css
                 <td>
                   <button type="button" class="btn btn-outline-danger btn-sm" @click="deleteCartItem(item)"
                     :disabled="item.id===loadingItem">
-                    <i class="fas fa-spinner fa-pulse"></i>
+                    <i class="fas fa-spinner fa-pulse" v-if="item.id===loadingItem"></i>
                     x
                   </button>
                 </td>
