@@ -79,8 +79,8 @@ const productModal = {
 }
 
 
-
 const app = createApp({
+    
     data() {
         return {
             products: [],
